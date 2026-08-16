@@ -1,29 +1,34 @@
 #include <iostream>
-#include <string>
+using namespace std;
 
-void printWelcomeMessage() {
-    std::cout << "      Welcome to Git !       " << std::endl;
-}
-
-
-void greetUser() {
-    std::cout << "Hello, Developer!" << std::endl;
-}
-
-int addNumbers(int a, int b) {
-    return a + b;
-}
+#include "login.h"
+#include "profile.h"
+#include "dashboard.h"
+#include "settings.h"
 
 int main() {
-    printWelcomeMessage();
-    greetUser();
+    LoginManager login;
+    ProfileManager profile;
+    Dashboard dashboard;
+    Settings settings;
 
-    int num1 = 5;
-    int num2 = 10;
-    int result = addNumbers(num1, num2);
+    login.registerUser("alice", "password123");
 
-    std::cout << "The sum of " << num1 << " and " << num2 << " is: " << result << std::endl;
-    std::cout << "Program finished successfully." << std::endl;
+    bool authenticated = login.authenticate("alice", "password123");
+
+    profile.updateProfile(
+        "Alice",
+        "alice@example.com",
+        "CSE student interested in software development."
+    );
+
+    settings.setTheme("dark");
+    settings.setLanguage("English");
+
+    std::cout << dashboard.buildReport(authenticated, profile);
+    std::cout << settings.describe() << std::endl;
 
     return 0;
+
+    
 }
