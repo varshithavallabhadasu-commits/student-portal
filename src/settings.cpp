@@ -13,8 +13,15 @@ void Settings::setTheme(const std::string& newTheme) {
     theme = newTheme;
 }
 
+void Settings::setLanguage(const std::string& newLanguage) {
+    if (!newLanguage.empty()) {
+        language = newLanguage;
+    }
+}
+
 std::string Settings::describe() const {
     return "Notifications: " +
            std::string(notificationsEnabled ? "on" : "off") +
-           ", Theme: " + theme;
+           ", Theme: " + theme +
+           ", Language: " + language;
 }

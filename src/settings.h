@@ -7,11 +7,13 @@ class Settings {
 public:
     void toggleNotifications();
     void setTheme(const std::string& newTheme);
+    void setLanguage(const std::string& newLanguage);
     std::string describe() const;
 
 private:
     bool notificationsEnabled = true;
     std::string theme = "light";
+    std::string language = "English";
 };
 
 #endif
