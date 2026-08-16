@@ -3,7 +3,10 @@
 void ProfileManager::updateProfile(const std::string& n, const std::string& e, const std::string& b) {
     name = n;
     email = e;
-    bio = b;
+
+    if (b.size() <= 300) {
+        bio = b;
+    }
 }
 
 std::string ProfileManager::getSummary() const {
