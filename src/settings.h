@@ -17,4 +17,4 @@ private:
     std::string notificationMessage = "No new notifications";
 };
 
-#endif
+#endif    
