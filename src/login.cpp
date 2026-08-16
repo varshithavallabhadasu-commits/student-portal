@@ -1,6 +1,10 @@
 #include "login.h"
 
 void LoginManager::registerUser(const std::string& username, const std::string& password) {
+    if (password.empty()) {
+        return;
+    }
+
     users[username] = password;
 }
 
