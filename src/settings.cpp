@@ -5,6 +5,11 @@ void Settings::toggleNotifications() {
 }
 
 void Settings::setTheme(const std::string& newTheme) {
+    if (newTheme.empty()) {
+        theme = "light";
+        return;
+    }
+
     theme = newTheme;
 }
 
