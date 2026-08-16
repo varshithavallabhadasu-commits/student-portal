@@ -13,7 +13,7 @@ A lightweight student portal demo used to practice Git workflows: login, profile
 
 ## Build & Run
 ```bash
-g++ -std=c++17 -o portal main.cpp login.cpp profile.cpp dashboard.cpp settings.cpp
+g++ -std=c++17 -o portal src/*.cpp
 ./portal
 ```
 
