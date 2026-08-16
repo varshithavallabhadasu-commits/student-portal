@@ -12,7 +12,7 @@ public:
 
 private:
     bool notificationsEnabled = true;
-    std::string theme = "light";
+    std::string theme = "dark";
     std::string language = "English";
     std::string notificationMessage = "No new notifications";
 };
