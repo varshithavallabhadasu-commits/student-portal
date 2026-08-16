@@ -11,8 +11,10 @@ std::string Dashboard::buildReport(bool isLoggedIn, const ProfileManager& profil
     out << "Generated at: " << std::ctime(&now);
 
     if (isLoggedIn) {
-        out << "Profile: " << profile.getSummary() << "\n";
-    }
+    out << "Profile: " << profile.getSummary() << "\n";
+} else {
+    out << "Please log in to view your profile.\n";
+}
 
     return out.str();
 }
