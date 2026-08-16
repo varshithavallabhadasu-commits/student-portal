@@ -20,8 +20,9 @@ void Settings::setLanguage(const std::string& newLanguage) {
 }
 
 std::string Settings::describe() const {
-    return "Notifications: " +
-           std::string(notificationsEnabled ? "on" : "off") +
-           ", Theme: " + theme +
-           ", Language: " + language;
+return "Notifications: " +
+       std::string(notificationsEnabled ? "on" : "off") +
+       ", Theme: " + theme +
+       ", Language: " + language +
+       ", Message: " + notificationMessage;
 }
