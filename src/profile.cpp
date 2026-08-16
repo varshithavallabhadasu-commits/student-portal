@@ -10,5 +10,6 @@ void ProfileManager::updateProfile(const std::string& n, const std::string& e, c
 }
 
 std::string ProfileManager::getSummary() const {
-    return name + " <" + email + "> — " + bio;
+    std::string displayedBio = bio.empty() ? "No bio provided" : bio;
+    return name + " <" + email + "> — " + displayedBio;
 }
