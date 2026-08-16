@@ -16,3 +16,10 @@ A lightweight student portal demo used to practice Git workflows: login, profile
 g++ -std=c++17 -o portal main.cpp login.cpp profile.cpp dashboard.cpp settings.cpp
 ./portal
 ```
+
+## Project Structure
+- main.cpp — entry point
+- login.cpp/.h — authentication module
+- profile.cpp/.h — user profile module
+- dashboard.cpp/.h — dashboard summary module
+- settings.cpp/.h — user settings module
