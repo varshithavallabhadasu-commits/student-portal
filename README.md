@@ -10,3 +10,9 @@ A lightweight student portal demo used to practice Git workflows: login, profile
 ## Setup
 1. Clone the repo: `git clone <repo-url>`
 2. Enter the folder: `cd student-portal`
+
+## Build & Run
+```bash
+g++ -std=c++17 -o portal main.cpp login.cpp profile.cpp dashboard.cpp settings.cpp
+./portal
+```
